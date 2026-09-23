@@ -57,3 +57,13 @@ Run `python3 -m http.server 8000` in this folder and open http://localhost:8000.
 GitHub Pages: Settings → Pages → Deploy from a branch → main → / (root).
 
 All images and films remain the property of their respective rights holders.
+
+## Updated image layout
+
+The supplied stills have been cropped to exactly 2048 × 982 pixels (about 2.086:1), with no black bars. Upload future stills in that same ratio. The six Drake’s Fortune gallery images open in a viewer with Previous, Next and Escape to close.
+
+The beach is reserved for the opening homepage image. `home.filmsImage` uses the camera close-up. `home.commercialImage` stays blank until you supply a commercial image; this is intentional and no narrative still is reused there.
+
+Film previews now use the higher-resolution YouTube thumbnail with a clean wide crop, with a lower-resolution fallback if needed. For precise control, add a `poster` image path in each film entry. Playback preserves the uploaded film’s framing, including any black bars encoded into the video itself.
+
+The browser icon is `ashjr-icon.svg` with `ashjr-icon.ico` as a fallback, using a fresh filename to avoid the old N icon cache.

@@ -1,14 +1,34 @@
 {
   "home": {
-    "filmsImage": "assets/coast.jpg",
+    "filmsImage": "assets/films-camera.webp",
     "commercialImage": ""
   },
   "films": {
     "drakes-fortune": {
       "stills": [
         {
-          "src": "assets/coast.jpg",
-          "alt": "Palm trees along a Caribbean beach at dusk"
+          "src": "assets/drake-bay.webp",
+          "alt": "A figure overlooking the bay beneath a canopy"
+        },
+        {
+          "src": "assets/drake-fort.webp",
+          "alt": "Historic fort courtyard and cannons"
+        },
+        {
+          "src": "assets/drake-camera.webp",
+          "alt": "A man looking through a vintage camera"
+        },
+        {
+          "src": "assets/drake-ramparts.webp",
+          "alt": "A man looking across the fort ramparts"
+        },
+        {
+          "src": "assets/drake-cigarette.webp",
+          "alt": "Close-up of a hand holding a lit cigarette"
+        },
+        {
+          "src": "assets/drake-profile.webp",
+          "alt": "A man in profile beneath a canopy"
         }
       ]
     },
