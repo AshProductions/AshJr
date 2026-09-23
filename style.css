@@ -1039,3 +1039,340 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   .category-word{padding:17px}
   .category-word .icon-arrow{right:16px;bottom:14px}
 }
+
+
+/* September 24 refinement pass */
+.hero-motif{display:none!important}
+
+.home-hero{
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.home-hero-copy{
+  width:min(1120px,94%);
+  margin:0 auto;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.home-mark{
+  margin:0;
+  font-size:clamp(58px,6.4vw,92px);
+  line-height:.8;
+  letter-spacing:-.08em;
+}
+.home-mark .mark-ash{
+  font-family:var(--sans);
+  font-weight:700;
+}
+.home-mark .mark-jr{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  display:inline-block;
+  margin-left:-.055em;
+  transform:translateY(.03em) rotate(-2deg);
+}
+.hero-name{
+  margin-top:13px;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.015em;
+  color:rgba(255,255,255,.72);
+}
+.hero-quote{
+  max-width:1080px;
+  margin:30px auto 27px;
+  font-family:var(--sans);
+  font-style:normal;
+  font-size:clamp(52px,7.3vw,108px);
+  font-weight:500;
+  line-height:.91;
+  letter-spacing:-.062em;
+  color:var(--text);
+}
+.hero-quote span{display:block}
+.hero-quote em{
+  display:inline-block;
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  font-size:1.08em;
+  letter-spacing:-.045em;
+  transform:translateY(.015em);
+}
+.hero-roles{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.62);
+}
+.hero-roles b{
+  width:auto;
+  overflow:visible;
+  font-family:var(--serif);
+  font-size:15px;
+  font-style:italic;
+  font-weight:500;
+  color:rgba(255,255,255,.45);
+}
+.hero-roles b::before{content:none}
+
+.section-heading{
+  display:block;
+  margin-bottom:30px;
+}
+.section-heading .section-title{
+  margin:0;
+  text-align:left;
+}
+.projects-motif{
+  right:1%;
+  top:25px;
+  width:128px;
+  height:62px;
+  opacity:.42;
+}
+.category-word-commercial::before,
+.category-word-films .films-back{
+  pointer-events:none;
+}
+.category-word-films{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:0;
+  overflow:hidden;
+}
+.category-word-films .films-back{
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:1;
+  width:max-content;
+  max-width:92%;
+  font-family:var(--serif);
+  font-size:clamp(37px,4vw,60px);
+  font-style:italic;
+  font-weight:500;
+  letter-spacing:-.055em;
+  line-height:.9;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.28);
+  transform:translate(-47%,-44%) skewX(-4deg);
+  white-space:nowrap;
+  transition:transform .4s ease,-webkit-text-stroke-color .3s ease;
+}
+.category-word-films .narrative-word,
+.category-word-films .documentary-word{
+  position:relative;
+  z-index:2;
+  font-family:var(--sans);
+  font-size:clamp(33px,3.55vw,54px);
+  font-weight:700;
+  line-height:.82;
+  letter-spacing:-.06em;
+  text-transform:uppercase;
+  color:var(--text);
+  -webkit-text-stroke:0;
+  text-shadow:0 3px 24px rgba(0,0,0,.38);
+  transition:transform .35s ease,letter-spacing .35s ease;
+}
+.category-word-films .narrative-word{
+  transform:translateX(-9%);
+}
+.category-word-films .documentary-word{
+  transform:translateX(8%);
+}
+.category-word-films em{
+  position:relative;
+  z-index:4;
+  margin:-.12em 0 -.10em;
+  font-family:var(--serif);
+  font-size:clamp(46px,5vw,74px);
+  font-style:italic;
+  font-weight:500;
+  line-height:.66;
+  color:var(--accent);
+  text-shadow:0 2px 15px rgba(0,0,0,.32);
+  transform:translateX(5%) rotate(-9deg);
+  transition:transform .4s ease;
+}
+.category-word-films .documentary-word::after{
+  content:"";
+  position:absolute;
+  left:29%;
+  top:56%;
+  width:38%;
+  height:2px;
+  background:var(--accent);
+  transform:rotate(-6deg);
+  opacity:.82;
+  transition:left .35s ease,width .35s ease;
+}
+.category-overlay:hover .category-word-films .films-back{
+  transform:translate(-43%,-49%) skewX(-7deg);
+  -webkit-text-stroke-color:rgba(255,255,255,.44);
+}
+.category-overlay:hover .category-word-films .narrative-word{
+  transform:translateX(-11%);
+  letter-spacing:-.042em;
+}
+.category-overlay:hover .category-word-films .documentary-word{
+  transform:translateX(10%);
+  letter-spacing:-.042em;
+}
+.category-overlay:hover .category-word-films em{
+  transform:translateX(0) rotate(-4deg) scale(1.06);
+}
+.category-overlay:hover .category-word-films .documentary-word::after{
+  left:24%;
+  width:48%;
+}
+
+/* Keep graphic motifs only in empty page space. */
+.home-about::before{
+  content:"";
+  position:absolute;
+  right:2%;
+  top:35px;
+  width:170px;
+  height:170px;
+  border:1px solid rgba(255,255,255,.045);
+  border-radius:50%;
+  background:none;
+  transform:none;
+  pointer-events:none;
+}
+.home-about::after{content:none}
+
+.page-intro{
+  position:relative;
+  overflow:hidden;
+}
+.page-intro::before{
+  content:"";
+  position:absolute;
+  right:4%;
+  top:24px;
+  width:132px;
+  height:132px;
+  border:1px solid rgba(255,255,255,.035);
+  border-radius:50%;
+  pointer-events:none;
+}
+.page-intro::after{
+  content:"";
+  position:absolute;
+  right:1%;
+  top:46px;
+  width:150px;
+  height:70px;
+  opacity:.55;
+  background:repeating-linear-gradient(128deg,transparent 0 18px,rgba(255,255,255,.045) 18px 19px);
+  transform:skewX(-8deg);
+  pointer-events:none;
+}
+.contact-page::before{
+  content:"";
+  position:absolute;
+  left:-42px;
+  bottom:54px;
+  width:150px;
+  height:150px;
+  border:1px solid rgba(255,255,255,.035);
+  border-radius:50%;
+  transform:none;
+  pointer-events:none;
+}
+.contact-page::after{
+  content:"";
+  position:absolute;
+  right:4%;
+  top:66px;
+  width:120px;
+  height:62px;
+  border:0;
+  opacity:.55;
+  background:repeating-linear-gradient(128deg,transparent 0 17px,rgba(255,255,255,.045) 17px 18px);
+  transform:skewX(-8deg);
+  pointer-events:none;
+}
+
+/* Refined rectangular contact tag inspired by the reference header. */
+.nav-contact{
+  position:relative;
+  isolation:isolate;
+  padding:9px 16px!important;
+  border-radius:3px!important;
+  background:var(--accent)!important;
+  color:#101111!important;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.015em;
+  line-height:1;
+  box-shadow:0 5px 18px rgba(0,0,0,.16);
+  transform:none!important;
+  transition:transform .2s ease,background .2s ease;
+}
+.nav-contact::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:5px -5px -5px 5px;
+  border:1px solid rgba(240,74,54,.55);
+  border-radius:3px;
+  background:transparent;
+  clip-path:none;
+  transform:none;
+  transition:transform .2s ease,border-color .2s ease;
+}
+.nav-contact::after{
+  content:none!important;
+  display:none!important;
+}
+.nav-contact:hover,
+.nav-contact[aria-current=page]{
+  color:#101111!important;
+}
+.nav-contact:hover{
+  background:#ff604a!important;
+  transform:translate(-1px,-1px)!important;
+}
+.nav-contact:hover::before{
+  transform:translate(2px,2px);
+  border-color:rgba(255,96,74,.8);
+  filter:none;
+}
+
+@media(max-width:760px){
+  .home-mark{font-size:clamp(48px,14vw,70px)}
+  .hero-name{margin-top:10px;font-size:11px}
+  .hero-quote{font-size:clamp(39px,10.8vw,64px);margin:24px auto 22px;line-height:.93}
+  .hero-roles{font-size:9px;letter-spacing:.17em}
+  .category-word-films .films-back{font-size:clamp(34px,10vw,50px)}
+  .category-word-films .narrative-word,
+  .category-word-films .documentary-word{font-size:clamp(31px,9vw,46px)}
+  .category-word-films em{font-size:clamp(42px,12vw,62px)}
+  .page-intro::before{right:-35px;top:18px}
+  .page-intro::after{right:-10px;opacity:.34}
+  .nav-contact{padding:8px 13px!important}
+}
+@media(max-width:420px){
+  .home-mark{font-size:46px}
+  .hero-name{font-size:10px}
+  .hero-quote{font-size:37px}
+  .hero-roles{font-size:8.5px}
+  .nav-contact{padding:7px 11px!important}
+}
