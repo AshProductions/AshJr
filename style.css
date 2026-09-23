@@ -1977,3 +1977,113 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
     font-size:20px;
   }
 }
+
+
+/* v17 — cover correction from rendered screenshot */
+.home-hero .hero-identity{
+  gap:0;
+}
+
+.home-hero .hero-roles{
+  margin:0 0 -1px;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.18em;
+  line-height:1;
+  color:rgba(255,255,255,.54);
+}
+
+.home-hero .hero-roles b{
+  font-size:7px;
+  color:rgba(255,255,255,.34);
+}
+
+.home-hero .home-mark{
+  margin:0;
+  font-size:clamp(50px,4.8vw,68px);
+  line-height:.74;
+}
+
+.home-hero .hero-name{
+  margin:-1px 0 0;
+  font-family:var(--serif);
+  font-size:11px;
+  font-style:italic;
+  font-weight:500;
+  letter-spacing:.012em;
+  line-height:1;
+  color:rgba(255,255,255,.64);
+}
+
+.home-hero .hero-quote{
+  margin:34px auto 0;
+  font-family:var(--sans);
+  font-size:clamp(31px,3.15vw,46px);
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-.045em;
+  text-transform:none;
+  white-space:nowrap;
+}
+
+.home-hero .hero-quote .quote-base,
+.home-hero .hero-quote .quote-layer{
+  font-family:var(--sans);
+  font-size:inherit;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-.045em;
+  text-transform:none;
+  white-space:nowrap;
+}
+
+.home-hero .hero-quote .quote-base{
+  color:rgba(255,255,255,.95);
+  text-shadow:0 2px 18px rgba(0,0,0,.22);
+}
+
+.home-hero .hero-quote .quote-layer-one{
+  z-index:2;
+  color:var(--accent);
+  opacity:.42;
+  transform:translate(2px,1px) rotate(.08deg);
+  clip-path:none;
+}
+
+.home-hero .hero-quote .quote-layer-two{
+  z-index:1;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(240,74,54,.20);
+  opacity:.7;
+  transform:translate(-1.5px,-1px) rotate(-.08deg);
+  clip-path:none;
+}
+
+@media(max-width:760px){
+  .home-hero .hero-roles{
+    margin-bottom:-1px;
+    font-size:7px;
+  }
+  .home-hero .home-mark{
+    font-size:42px;
+    line-height:.74;
+  }
+  .home-hero .hero-name{
+    margin-top:-1px;
+    font-size:9.5px;
+  }
+  .home-hero .hero-quote{
+    margin-top:27px;
+    font-size:clamp(20px,5vw,28px);
+    letter-spacing:-.035em;
+  }
+  .home-hero .hero-quote .quote-base,
+  .home-hero .hero-quote .quote-layer{
+    letter-spacing:-.035em;
+  }
+}
+@media(max-width:420px){
+  .home-hero .home-mark{font-size:39px}
+  .home-hero .hero-name{font-size:9px}
+  .home-hero .hero-quote{font-size:19px}
+}
