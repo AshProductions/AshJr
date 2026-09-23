@@ -34,11 +34,13 @@
     },
     "leave": {
       "youtube": "https://youtu.be/hB8q5_anAyM",
-      "stills": []
+      "stills": [],
+      "poster": "assets/leave-poster.webp"
     },
     "viktor": {
       "youtube": "https://youtu.be/dnfMFGrJJoU",
-      "stills": []
+      "stills": [],
+      "poster": "assets/viktor-poster.webp"
     }
   },
   "commercial": [
