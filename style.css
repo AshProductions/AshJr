@@ -1782,3 +1782,198 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   .home-mark{font-size:39px}
   .hero-quote{font-size:20px}
 }
+
+
+/* v16 — cover rebuilt from zero */
+.home-hero{
+  height:min(68vh,680px);
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.home-hero .home-hero-copy{
+  width:min(1220px,96%);
+  margin:0 auto;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.home-hero .hero-identity{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+}
+
+.home-hero .hero-roles{
+  order:initial;
+  margin:0 0 3px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-family:var(--sans);
+  font-size:8.5px;
+  font-weight:600;
+  line-height:1;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.58);
+}
+
+.home-hero .hero-roles b{
+  width:auto;
+  overflow:visible;
+  font-family:var(--sans);
+  font-size:8px;
+  font-style:normal;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:0;
+  color:rgba(255,255,255,.38);
+}
+
+.home-hero .hero-roles b::before{content:none}
+
+.home-hero .home-mark{
+  order:initial;
+  margin:0;
+  font-size:clamp(52px,5.1vw,72px);
+  line-height:.79;
+  letter-spacing:-.082em;
+  white-space:nowrap;
+}
+
+.home-hero .home-mark .mark-ash{
+  display:inline-block;
+  font-family:var(--sans);
+  font-weight:700;
+  letter-spacing:-.087em;
+}
+
+.home-hero .home-mark .mark-jr{
+  display:inline-block;
+  margin-left:-.055em;
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  letter-spacing:-.06em;
+  transform:translateY(.025em) rotate(-1.5deg);
+}
+
+.home-hero .hero-name{
+  order:initial;
+  margin:3px 0 0;
+  font-family:var(--serif);
+  font-size:12px;
+  font-style:italic;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:.018em;
+  text-transform:none;
+  color:rgba(255,255,255,.69);
+}
+
+.home-hero .hero-quote{
+  order:initial;
+  position:relative;
+  display:inline-block;
+  width:auto;
+  max-width:none;
+  margin:23px auto 0;
+  padding:0;
+  font-family:var(--display);
+  font-size:clamp(43px,5.15vw,74px);
+  font-style:normal;
+  font-weight:400;
+  line-height:.92;
+  letter-spacing:.008em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  color:var(--text);
+  isolation:isolate;
+}
+
+.home-hero .hero-quote .quote-base,
+.home-hero .hero-quote .quote-layer{
+  display:block;
+  font:inherit;
+  line-height:inherit;
+  letter-spacing:inherit;
+  white-space:nowrap;
+}
+
+.home-hero .hero-quote .quote-base{
+  position:relative;
+  z-index:3;
+  color:rgba(255,255,255,.96);
+  text-shadow:0 3px 24px rgba(0,0,0,.22);
+}
+
+.home-hero .hero-quote .quote-layer{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+.home-hero .hero-quote .quote-layer-one{
+  z-index:4;
+  color:var(--accent);
+  opacity:.92;
+  transform:translate(3px,1px);
+  clip-path:polygon(0 44%,100% 38%,100% 56%,0 61%);
+}
+
+.home-hero .hero-quote .quote-layer-two{
+  z-index:2;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(240,74,54,.34);
+  opacity:.9;
+  transform:translate(-2px,-2px);
+  clip-path:polygon(18% 17%,82% 11%,81% 33%,17% 39%);
+}
+
+.home-hero .hero-quote::before,
+.home-hero .hero-quote::after{
+  content:none!important;
+  display:none!important;
+}
+
+@media(max-width:760px){
+  .home-hero{
+    height:min(64svh,600px);
+    min-height:500px;
+  }
+  .home-hero .hero-roles{
+    margin-bottom:2px;
+    font-size:7.5px;
+    gap:6px;
+    letter-spacing:.17em;
+  }
+  .home-hero .home-mark{font-size:44px}
+  .home-hero .hero-name{
+    margin-top:2px;
+    font-size:10.5px;
+  }
+  .home-hero .hero-quote{
+    margin-top:20px;
+    font-size:clamp(21px,6.1vw,34px);
+    letter-spacing:.006em;
+  }
+}
+
+@media(max-width:420px){
+  .home-hero .home-mark{font-size:40px}
+  .home-hero .hero-name{font-size:10px}
+  .home-hero .hero-quote{
+    margin-top:18px;
+    font-size:20px;
+  }
+}
