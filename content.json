@@ -1,8 +1,7 @@
 {
   "home": {
-    "commercialImage": "",
-    "narrativeImage": "assets/viktor-poster.webp",
-    "documentaryImage": "assets/drake-bay.webp"
+    "filmsImage": "assets/films-camera.webp",
+    "commercialImage": ""
   },
   "films": {
     "drakes-fortune": {
