@@ -1,0 +1,47 @@
+{
+  "home": {
+    "filmsImage": "assets/coast.jpg",
+    "commercialImage": ""
+  },
+  "films": {
+    "drakes-fortune": {
+      "stills": [
+        {
+          "src": "assets/coast.jpg",
+          "alt": "Palm trees along a Caribbean beach at dusk"
+        }
+      ]
+    },
+    "leave": {
+      "youtube": "https://youtu.be/hB8q5_anAyM",
+      "stills": []
+    },
+    "viktor": {
+      "youtube": "https://youtu.be/dnfMFGrJJoU",
+      "stills": []
+    }
+  },
+  "commercial": [
+    {
+      "title": "",
+      "brand": "",
+      "role": "",
+      "youtube": "",
+      "image": ""
+    },
+    {
+      "title": "",
+      "brand": "",
+      "role": "",
+      "youtube": "",
+      "image": ""
+    },
+    {
+      "title": "",
+      "brand": "",
+      "role": "",
+      "youtube": "",
+      "image": ""
+    }
+  ]
+}
