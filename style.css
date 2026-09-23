@@ -1341,8 +1341,7 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 
 /* Homepage cover — canonical hero component */
 .home-hero{
-  --hero-pink:#e7a2c5;
-  --hero-blue:#a8c7cf;
+  --hero-pink:#e6a4c4;
   height:min(68vh,680px);
   min-height:520px;
   display:flex;
@@ -1369,22 +1368,26 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 }
 
 .home-hero .home-hero-copy{
+  position:relative;
   width:min(1100px,94%);
+  height:100%;
+  min-height:inherit;
   margin:0 auto;
   padding:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  transform:translateY(-1.5%);
 }
 
 .home-hero .hero-identity{
+  position:absolute;
+  left:50%;
+  top:27%;
+  transform:translateX(-50%);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   gap:0;
+  width:max-content;
+  max-width:100%;
 }
 
 .home-hero .hero-name{
@@ -1421,18 +1424,18 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   font-size:1.28em;
   font-style:normal;
   font-weight:400;
-  line-height:.7;
+  line-height:.68;
   letter-spacing:-.04em;
-  transform:translateY(.10em) rotate(-5deg);
+  transform:translateY(.075em) rotate(-5deg);
   transform-origin:center;
 }
 
 .home-hero .hero-roles{
-  margin:6px 0 0;
+  margin:11px 0 0;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:7px;
+  gap:8px;
   font-family:var(--sans);
   font-size:8px;
   font-weight:600;
@@ -1443,30 +1446,40 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 }
 
 .home-hero .hero-roles b{
-  font:inherit;
-  font-size:7px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 1px;
+  font-family:var(--sans);
+  font-size:13px;
   font-weight:400;
+  line-height:.55;
   letter-spacing:0;
-  color:rgba(255,255,255,.33);
+  color:rgba(255,255,255,.52);
+  transform:translateY(-.02em);
 }
 
 .home-hero .hero-quote{
-  position:relative;
+  position:absolute;
+  left:50%;
+  top:54%;
+  transform:translate(-50%,-50%);
   display:inline-block;
-  width:auto;
+  width:max-content;
   max-width:calc(100vw - 82px);
-  margin:31px auto 0;
+  margin:0;
   padding:0;
   isolation:isolate;
   font-family:"Bodoni Moda",Didot,"Times New Roman",serif;
-  font-size:clamp(30px,3.05vw,45px);
-  font-style:normal;
+  font-size:clamp(31px,3.15vw,46px);
+  font-style:italic;
   font-weight:500;
-  line-height:1;
-  letter-spacing:-.035em;
+  line-height:1.04;
+  letter-spacing:-.038em;
   text-transform:none;
   white-space:nowrap;
-  color:rgba(255,255,255,.96);
+  color:rgba(255,255,255,.97);
+  font-feature-settings:"kern" 1,"liga" 1;
 }
 
 .home-hero .hero-quote .quote-base,
@@ -1483,7 +1496,7 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   position:relative;
   z-index:3;
   color:rgba(255,255,255,.97);
-  text-shadow:0 .08em .48em rgba(0,0,0,.24);
+  text-shadow:0 .08em .5em rgba(0,0,0,.24);
 }
 
 .home-hero .hero-quote .quote-layer{
@@ -1496,16 +1509,17 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 .home-hero .hero-quote .quote-layer-one{
   z-index:2;
   color:transparent;
-  -webkit-text-stroke:.65px rgba(231,162,197,.52);
-  opacity:.58;
-  transform:translate(1.15px,.65px);
+  -webkit-text-stroke:.55px rgba(230,164,196,.48);
+  opacity:.72;
+  transform:translate(1.05px,.75px);
 }
 
 .home-hero .hero-quote .quote-layer-two{
   z-index:1;
-  color:var(--hero-blue);
-  opacity:.12;
-  transform:translate(-1.15px,-.55px);
+  color:transparent;
+  -webkit-text-stroke:.4px rgba(255,255,255,.22);
+  opacity:.68;
+  transform:translate(-1px,-.65px);
 }
 
 @media(max-width:760px){
@@ -1514,10 +1528,9 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
     min-height:500px;
   }
 
-  .home-hero .home-hero-copy{
-    width:94%;
-    transform:translateY(-1%);
-  }
+  .home-hero .home-hero-copy{width:94%}
+
+  .home-hero .hero-identity{top:25%}
 
   .home-hero .hero-name{
     margin-bottom:3px;
@@ -1532,30 +1545,38 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   .home-hero .home-mark .mark-jr{
     margin-left:-.09em;
     font-size:1.27em;
+    transform:translateY(.065em) rotate(-5deg);
   }
 
   .home-hero .hero-roles{
-    margin-top:5px;
-    gap:6px;
+    margin-top:10px;
+    gap:7px;
     font-size:7.4px;
     letter-spacing:.16em;
   }
 
-  .home-hero .hero-roles b{font-size:6.5px}
+  .home-hero .hero-roles b{
+    font-size:11px;
+    margin-inline:1px;
+  }
 
   .home-hero .hero-quote{
+    top:53%;
     max-width:calc(100vw - 42px);
-    margin-top:26px;
-    font-size:clamp(23px,5.1vw,29px);
-    letter-spacing:-.03em;
+    font-size:clamp(24px,5.25vw,30px);
+    letter-spacing:-.034em;
   }
 }
 
 @media(max-width:520px){
+  .home-hero .hero-identity{top:24%}
+
   .home-hero .hero-quote{
-    max-width:min(91vw,430px);
-    font-size:clamp(23px,6.25vw,27px);
-    line-height:1.03;
+    top:52%;
+    width:min(91vw,430px);
+    max-width:none;
+    font-size:clamp(23px,6.2vw,27px);
+    line-height:1.08;
     white-space:normal;
   }
 }
@@ -1563,5 +1584,4 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 @media(max-width:420px){
   .home-hero .home-mark{font-size:41px}
   .home-hero .hero-name{font-size:10px}
-  .home-hero .hero-quote{margin-top:24px}
 }
