@@ -1341,7 +1341,8 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 
 /* Homepage cover — canonical hero component */
 .home-hero{
-  --hero-pink:#efa8ca;
+  --hero-pink:#e7a2c5;
+  --hero-blue:#a8c7cf;
   height:min(68vh,680px);
   min-height:520px;
   display:flex;
@@ -1352,8 +1353,8 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 
 .home-hero .hero-shade{
   background:
-    radial-gradient(ellipse at 50% 48%,rgba(7,8,8,.08) 0%,rgba(7,8,8,.14) 42%,rgba(7,8,8,.32) 100%),
-    linear-gradient(180deg,rgba(7,8,8,.10),rgba(7,8,8,.22));
+    radial-gradient(ellipse at 50% 48%,rgba(7,8,8,.05) 0%,rgba(7,8,8,.12) 44%,rgba(7,8,8,.30) 100%),
+    linear-gradient(180deg,rgba(7,8,8,.08),rgba(7,8,8,.20));
 }
 
 .home-hero .hero-grain{
@@ -1361,20 +1362,21 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   inset:0;
   z-index:-1;
   pointer-events:none;
-  opacity:.055;
+  opacity:.045;
   mix-blend-mode:soft-light;
-  background-image:radial-gradient(circle,rgba(255,255,255,.7) .45px,transparent .6px);
+  background-image:radial-gradient(circle,rgba(255,255,255,.65) .4px,transparent .6px);
   background-size:3px 3px;
 }
 
 .home-hero .home-hero-copy{
-  width:min(1120px,94%);
+  width:min(1100px,94%);
   margin:0 auto;
   padding:0;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  transform:translateY(-1.5%);
 }
 
 .home-hero .hero-identity{
@@ -1385,33 +1387,22 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   gap:0;
 }
 
-.home-hero .hero-roles{
-  margin:0 0 3px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:7px;
-  font-family:var(--sans);
-  font-size:9px;
-  font-weight:600;
+.home-hero .hero-name{
+  margin:0 0 4px;
+  font-family:var(--serif);
+  font-size:12px;
+  font-style:italic;
+  font-weight:500;
   line-height:1;
-  letter-spacing:.17em;
+  letter-spacing:.035em;
   text-transform:none;
-  color:rgba(255,255,255,.60);
-}
-
-.home-hero .hero-roles b{
-  font:inherit;
-  font-size:8px;
-  font-weight:400;
-  letter-spacing:0;
-  color:rgba(255,255,255,.38);
+  color:rgba(255,255,255,.68);
 }
 
 .home-hero .home-mark{
   margin:0;
-  font-size:clamp(52px,4.9vw,70px);
-  line-height:.76;
+  font-size:clamp(53px,5vw,72px);
+  line-height:.72;
   letter-spacing:-.078em;
   white-space:nowrap;
 }
@@ -1420,45 +1411,59 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   display:inline-block;
   font-family:var(--sans);
   font-weight:700;
-  letter-spacing:-.082em;
+  letter-spacing:-.084em;
 }
 
 .home-hero .home-mark .mark-jr{
   display:inline-block;
-  margin-left:-.065em;
-  font-family:var(--serif);
-  font-style:italic;
-  font-weight:500;
-  letter-spacing:-.055em;
-  transform:translateY(.035em) rotate(-2deg);
+  margin-left:-.10em;
+  font-family:"Italianno",cursive;
+  font-size:1.28em;
+  font-style:normal;
+  font-weight:400;
+  line-height:.7;
+  letter-spacing:-.04em;
+  transform:translateY(.10em) rotate(-5deg);
+  transform-origin:center;
 }
 
-.home-hero .hero-name{
-  margin:3px 0 0;
-  font-family:var(--serif);
-  font-size:12px;
-  font-style:italic;
-  font-weight:500;
+.home-hero .hero-roles{
+  margin:6px 0 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-family:var(--sans);
+  font-size:8px;
+  font-weight:600;
   line-height:1;
-  letter-spacing:.024em;
-  text-transform:none;
-  color:rgba(255,255,255,.69);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.54);
+}
+
+.home-hero .hero-roles b{
+  font:inherit;
+  font-size:7px;
+  font-weight:400;
+  letter-spacing:0;
+  color:rgba(255,255,255,.33);
 }
 
 .home-hero .hero-quote{
   position:relative;
   display:inline-block;
   width:auto;
-  max-width:calc(100vw - 72px);
+  max-width:calc(100vw - 82px);
   margin:31px auto 0;
   padding:0;
   isolation:isolate;
-  font-family:"Barlow Condensed","Arial Narrow",var(--sans);
-  font-size:clamp(30px,3.2vw,47px);
+  font-family:"Bodoni Moda",Didot,"Times New Roman",serif;
+  font-size:clamp(30px,3.05vw,45px);
   font-style:normal;
   font-weight:500;
   line-height:1;
-  letter-spacing:.006em;
+  letter-spacing:-.035em;
   text-transform:none;
   white-space:nowrap;
   color:rgba(255,255,255,.96);
@@ -1477,8 +1482,8 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 .home-hero .hero-quote .quote-base{
   position:relative;
   z-index:3;
-  color:rgba(255,255,255,.96);
-  text-shadow:0 .08em .55em rgba(0,0,0,.26);
+  color:rgba(255,255,255,.97);
+  text-shadow:0 .08em .48em rgba(0,0,0,.24);
 }
 
 .home-hero .hero-quote .quote-layer{
@@ -1489,20 +1494,18 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 }
 
 .home-hero .hero-quote .quote-layer-one{
-  z-index:4;
-  color:var(--hero-pink);
+  z-index:2;
+  color:transparent;
+  -webkit-text-stroke:.65px rgba(231,162,197,.52);
   opacity:.58;
-  transform:translate(.035em,.018em);
-  clip-path:polygon(26% 5%,39% 0,38% 96%,27% 100%);
+  transform:translate(1.15px,.65px);
 }
 
 .home-hero .hero-quote .quote-layer-two{
-  z-index:2;
-  color:transparent;
-  -webkit-text-stroke:.75px rgba(239,168,202,.64);
-  opacity:.72;
-  transform:translate(-.025em,-.02em);
-  clip-path:polygon(68% 0,81% 6%,80% 100%,69% 94%);
+  z-index:1;
+  color:var(--hero-blue);
+  opacity:.12;
+  transform:translate(-1.15px,-.55px);
 }
 
 @media(max-width:760px){
@@ -1511,54 +1514,54 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
     min-height:500px;
   }
 
-  .home-hero .home-hero-copy{width:94%}
-
-  .home-hero .hero-roles{
-    margin-bottom:2px;
-    gap:6px;
-    font-size:7.8px;
-    letter-spacing:.15em;
-  }
-
-  .home-hero .hero-roles b{font-size:7px}
-
-  .home-hero .home-mark{
-    font-size:44px;
-    line-height:.76;
+  .home-hero .home-hero-copy{
+    width:94%;
+    transform:translateY(-1%);
   }
 
   .home-hero .hero-name{
-    margin-top:2px;
+    margin-bottom:3px;
     font-size:10.5px;
   }
 
+  .home-hero .home-mark{
+    font-size:45px;
+    line-height:.72;
+  }
+
+  .home-hero .home-mark .mark-jr{
+    margin-left:-.09em;
+    font-size:1.27em;
+  }
+
+  .home-hero .hero-roles{
+    margin-top:5px;
+    gap:6px;
+    font-size:7.4px;
+    letter-spacing:.16em;
+  }
+
+  .home-hero .hero-roles b{font-size:6.5px}
+
   .home-hero .hero-quote{
-    max-width:calc(100vw - 44px);
-    margin-top:25px;
-    font-size:clamp(24px,5.2vw,30px);
+    max-width:calc(100vw - 42px);
+    margin-top:26px;
+    font-size:clamp(23px,5.1vw,29px);
+    letter-spacing:-.03em;
   }
 }
 
 @media(max-width:520px){
   .home-hero .hero-quote{
-    max-width:min(92vw,430px);
-    font-size:clamp(24px,6.4vw,28px);
-    line-height:1.02;
+    max-width:min(91vw,430px);
+    font-size:clamp(23px,6.25vw,27px);
+    line-height:1.03;
     white-space:normal;
-  }
-
-  .home-hero .hero-quote .quote-layer-one{
-    clip-path:polygon(22% 5%,40% 0,39% 96%,23% 100%);
-  }
-
-  .home-hero .hero-quote .quote-layer-two{
-    clip-path:polygon(63% 0,82% 6%,81% 100%,64% 94%);
   }
 }
 
 @media(max-width:420px){
-  .home-hero .home-mark{font-size:40px}
+  .home-hero .home-mark{font-size:41px}
   .home-hero .hero-name{font-size:10px}
-  .home-hero .hero-quote{margin-top:23px}
+  .home-hero .hero-quote{margin-top:24px}
 }
-
