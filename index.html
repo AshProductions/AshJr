@@ -8,22 +8,25 @@
   z-index:20;
   min-height:88px;
   background:transparent;
+  justify-content:center;
 }
+.home-page>header>span{display:none}
 .home-page>header nav{
-  margin-left:auto;
+  margin:0;
+  justify-content:center;
 }
 @media(max-width:760px){
   .home-page>header{
     min-height:auto;
     padding-block:18px 13px;
     flex-wrap:nowrap;
-    justify-content:flex-end;
+    justify-content:center;
   }
   .home-page>header>span{display:none}
   .home-page>header nav{
     width:auto;
-    margin-left:auto;
-    justify-content:flex-end;
+    margin:0;
+    justify-content:center;
     gap:14px;
   }
 }
