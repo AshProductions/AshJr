@@ -1686,3 +1686,35 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
     padding-bottom:54px;
   }
 }
+
+
+/* Site-wide centered primary navigation */
+header{
+  position:relative;
+}
+header nav{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  margin:0;
+  justify-content:center;
+}
+@media(max-width:760px){
+  header{
+    justify-content:flex-start;
+  }
+  header nav{
+    position:static;
+    left:auto;
+    transform:none;
+    width:100%;
+    margin:0;
+    justify-content:center;
+    gap:18px;
+  }
+}
+@media(max-width:420px){
+  header nav{
+    gap:12px;
+  }
+}
