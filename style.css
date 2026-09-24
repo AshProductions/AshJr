@@ -238,17 +238,19 @@ header nav a[aria-current=page]::after{transform:scaleX(1)}
   margin-bottom:28px;
   color:var(--muted);
 }
-.film-details>p{
+.film-description{
   max-width:650px;
   font-size:14.5px;
   line-height:1.75;
 }
-.credits{
+.film-details .credits,
+.film-details .credits p{
   font-size:11.5px;
   line-height:1.8;
   letter-spacing:.02em;
   color:#92938f;
 }
+.credits p{margin:0}
 .credits p+p{margin-top:4px}
 
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -506,8 +508,9 @@ footer p{font-size:10.5px;letter-spacing:.02em;color:#858682}
   .film-heading h2{font-size:34px;margin:12px 0 18px}
   .project-number{font-size:9.5px}
   .film-details{grid-template-columns:1fr;gap:14px;margin-bottom:23px}
-  .film-details>p{font-size:13.5px;line-height:1.72}
-  .credits{font-size:10.5px}
+  .film-description{font-size:13.5px;line-height:1.72}
+  .film-details .credits,
+  .film-details .credits p{font-size:10.5px}
   .film-layout{grid-template-columns:1fr;gap:24px}
   .film-layout .credits{margin-top:15px}
   .film-layout+.gallery:not(:empty){margin-top:22px}
