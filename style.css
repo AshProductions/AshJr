@@ -1782,38 +1782,25 @@ header nav{
   font-family:var(--display);
   font-style:normal;
   font-weight:400;
-  font-size:clamp(58px,6.5vw,88px);
-  line-height:.86;
-  letter-spacing:.035em;
+  font-size:clamp(56px,6.2vw,82px);
+  line-height:.9;
+  letter-spacing:.025em;
   text-transform:uppercase;
   color:var(--text);
-  isolation:isolate;
-  text-shadow:0 4px 24px rgba(0,0,0,.18);
 }
 .page-intro>.stylized-page-title::before{
-  content:attr(data-title);
-  position:absolute;
-  z-index:-1;
-  left:.09em;
-  top:.08em;
-  font:inherit;
-  letter-spacing:inherit;
-  color:transparent;
-  -webkit-text-stroke:1px rgba(255,255,255,.22);
-  opacity:.9;
-  white-space:nowrap;
+  content:none;
 }
 .page-intro>.stylized-page-title::after{
   content:"";
   position:absolute;
-  left:13%;
-  bottom:-.08em;
-  width:44%;
-  height:3px;
+  left:0;
+  bottom:-.14em;
+  width:34px;
+  height:2px;
   background:var(--accent);
-  transform:rotate(-5deg);
-  transform-origin:left center;
-  box-shadow:0 0 18px rgba(240,74,54,.18);
+  transform:none;
+  box-shadow:none;
 }
 
 .film-list .film-heading h2{
@@ -1830,11 +1817,7 @@ header nav{
 
 @media(max-width:760px){
   .page-intro>.stylized-page-title{
-    font-size:clamp(50px,13vw,70px);
+    font-size:clamp(48px,12vw,66px);
     margin:14px 0 23px;
-  }
-  .page-intro>.stylized-page-title::after{
-    height:2px;
-    width:42%;
   }
 }
