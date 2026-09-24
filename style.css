@@ -1342,12 +1342,16 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 /* Homepage cover — canonical hero component */
 .home-hero{
   --hero-pink:#e6a4c4;
-  height:min(68vh,680px);
-  min-height:520px;
+  height:min(58vh,560px);
+  min-height:460px;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+}
+
+.home-hero .hero-image{
+  object-position:center top;
 }
 
 .home-hero .hero-shade{
@@ -1379,7 +1383,7 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 .home-hero .hero-identity{
   position:absolute;
   left:50%;
-  top:27%;
+  top:30%;
   transform:translateX(-50%);
   display:flex;
   flex-direction:column;
@@ -1463,7 +1467,7 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 .home-hero .hero-quote{
   position:absolute;
   left:50%;
-  top:54%;
+  top:57%;
   transform:translate(-50%,-50%);
   display:inline-block;
   width:max-content;
@@ -1525,13 +1529,13 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 
 @media(max-width:760px){
   .home-hero{
-    height:min(64svh,600px);
-    min-height:500px;
+    height:min(56svh,540px);
+    min-height:440px;
   }
 
   .home-hero .home-hero-copy{width:94%}
 
-  .home-hero .hero-identity{top:25%}
+  .home-hero .hero-identity{top:28%}
 
   .home-hero .hero-name{
     margin-bottom:3px;
@@ -1562,7 +1566,7 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
   }
 
   .home-hero .hero-quote{
-    top:53%;
+    top:55%;
     max-width:calc(100vw - 42px);
     font-size:clamp(24px,5.25vw,30px);
     letter-spacing:-.034em;
@@ -1570,10 +1574,10 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 }
 
 @media(max-width:520px){
-  .home-hero .hero-identity{top:24%}
+  .home-hero .hero-identity{top:27%}
 
   .home-hero .hero-quote{
-    top:52%;
+    top:54%;
     width:min(91vw,430px);
     max-width:none;
     font-size:clamp(23px,6.2vw,27px);
