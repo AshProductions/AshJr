@@ -44,8 +44,6 @@
     video.src = objectUrl;
     video.load();
     playBackground();
-
-    window.addEventListener('pagehide', () => URL.revokeObjectURL(objectUrl), {once:true});
   }).catch(() => {});
 
   video.addEventListener('loadedmetadata', playBackground);
