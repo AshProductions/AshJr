@@ -1772,3 +1772,23 @@ header nav{
     margin-bottom:18px;
   }
 }
+
+
+/* Inner page typography refinements */
+.page-intro>h1{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  letter-spacing:-.045em;
+}
+
+.film-list .film-heading h2{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  letter-spacing:-.035em;
+}
+
+.contact-page h1 em{
+  color:var(--accent);
+}
