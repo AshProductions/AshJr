@@ -1741,3 +1741,34 @@ header nav{
     font-size:11px;
   }
 }
+
+
+/* Homepage section labels: consistent small orange treatment + matching dividers */
+.home-page .projects{
+  border-top:1px solid var(--line);
+}
+.home-page .projects .section-title,
+.home-page .home-about .eyebrow{
+  margin:0;
+  font-family:var(--sans);
+  font-size:10.5px;
+  font-weight:600;
+  line-height:1.4;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.home-page .section-heading{
+  margin-bottom:20px;
+}
+
+@media(max-width:760px){
+  .home-page .projects .section-title,
+  .home-page .home-about .eyebrow{
+    font-size:9.5px;
+    letter-spacing:.16em;
+  }
+  .home-page .section-heading{
+    margin-bottom:18px;
+  }
+}
