@@ -1906,3 +1906,36 @@ header nav{
 @media(prefers-reduced-motion:reduce){
   .contact-page>.contact-bg-video{display:none}
 }
+
+
+/* Contact background stacking fix */
+.contact-page{
+  isolation:isolate;
+  background:#0c0c0c;
+}
+.contact-page>.contact-bg-video{
+  z-index:0!important;
+  opacity:.72!important;
+  filter:saturate(.92) contrast(1.06) brightness(.82)!important;
+}
+.contact-page>.contact-bg-overlay{
+  z-index:1!important;
+  background:
+    linear-gradient(90deg,rgba(9,10,10,.76) 0%,rgba(9,10,10,.56) 40%,rgba(9,10,10,.30) 72%,rgba(9,10,10,.42) 100%),
+    linear-gradient(180deg,rgba(9,10,10,.18) 0%,rgba(9,10,10,.08) 50%,rgba(9,10,10,.52) 100%)!important;
+}
+.contact-page>.contact-content-left,
+.contact-page>.contact-details{
+  position:relative;
+  z-index:2!important;
+}
+@media(max-width:900px){
+  .contact-page>.contact-bg-video{
+    opacity:.68!important;
+  }
+  .contact-page>.contact-bg-overlay{
+    background:
+      linear-gradient(180deg,rgba(9,10,10,.58) 0%,rgba(9,10,10,.40) 46%,rgba(9,10,10,.68) 100%),
+      linear-gradient(90deg,rgba(9,10,10,.58),rgba(9,10,10,.26))!important;
+  }
+}
