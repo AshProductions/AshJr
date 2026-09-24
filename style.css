@@ -1533,6 +1533,14 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
     min-height:440px;
   }
 
+
+  .home-hero .hero-image{
+    top:0;
+    bottom:auto;
+    height:128%;
+    object-position:center top;
+  }
+
   .home-hero .home-hero-copy{width:94%}
 
   .home-hero .hero-identity{top:28%}
