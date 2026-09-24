@@ -1865,23 +1865,20 @@ header nav{
 
 .contact-page>.contact-bg-fallback{
   z-index:0;
-  opacity:.82;
-  filter:saturate(1.04) contrast(1.06) brightness(.90);
+  opacity:.94;
+  filter:saturate(1.03) contrast(1.04) brightness(.92);
 }
 
 .contact-page>.contact-bg-video{
   z-index:0;
   opacity:0;
-  filter:saturate(1.04) contrast(1.06) brightness(.90);
+  filter:saturate(1.04) contrast(1.04) brightness(.92) blur(.35px);
+  mix-blend-mode:screen;
   transition:opacity .22s ease;
 }
 
 .contact-video-playing .contact-page>.contact-bg-video{
-  opacity:.82;
-}
-
-.contact-video-playing .contact-page>.contact-bg-fallback{
-  opacity:0;
+  opacity:.20;
 }
 
 .contact-page>.contact-bg-video::-webkit-media-controls,
@@ -1929,9 +1926,12 @@ header nav{
     object-position:45% center;
   }
 
-  .contact-page>.contact-bg-fallback,
+  .contact-page>.contact-bg-fallback{
+    opacity:.92;
+  }
+
   .contact-video-playing .contact-page>.contact-bg-video{
-    opacity:.78;
+    opacity:.18;
   }
 
   .contact-page>.contact-bg-overlay{
