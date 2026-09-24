@@ -1688,33 +1688,56 @@ footer>.social-links{justify-content:flex-start}footer>.footer-contact{margin-le
 }
 
 
-/* Site-wide centered primary navigation */
+
+
+/* Header reset: brand left, navigation right, with a smaller AshJr mark */
 header{
   position:relative;
+  min-height:78px;
+  justify-content:space-between;
+}
+header .brand{
+  font-size:25px;
+  letter-spacing:-.06em;
 }
 header nav{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  margin:0;
-  justify-content:center;
+  position:static;
+  left:auto;
+  transform:none;
+  width:auto;
+  margin-left:auto;
+  justify-content:flex-end;
 }
+
 @media(max-width:760px){
   header{
-    justify-content:flex-start;
+    min-height:auto;
+    padding-block:16px 13px;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:14px;
+  }
+  header .brand{
+    font-size:23px;
   }
   header nav{
     position:static;
-    left:auto;
-    transform:none;
-    width:100%;
-    margin:0;
-    justify-content:center;
-    gap:18px;
+    width:auto;
+    margin-left:auto;
+    justify-content:flex-end;
+    gap:14px;
   }
 }
+
 @media(max-width:420px){
+  header{
+    gap:10px;
+  }
+  header .brand{
+    font-size:21px;
+  }
   header nav{
-    gap:12px;
+    gap:9px;
+    font-size:11px;
   }
 }
