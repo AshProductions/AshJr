@@ -1838,3 +1838,71 @@ header nav{
     margin:14px 0 23px;
   }
 }
+
+
+/* Contact page cinematic background */
+.contact-page{
+  width:100%;
+  margin-inline:0;
+  padding-inline:var(--page-pad);
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#0c0c0c;
+}
+.contact-page>.contact-bg-video{
+  position:absolute;
+  z-index:-3;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 44%;
+  opacity:.62;
+  filter:saturate(.88) contrast(1.08) brightness(.72);
+  pointer-events:none;
+}
+.contact-page>.contact-bg-overlay{
+  position:absolute;
+  z-index:-2;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(9,10,10,.90) 0%,rgba(9,10,10,.76) 38%,rgba(9,10,10,.48) 70%,rgba(9,10,10,.58) 100%),
+    linear-gradient(180deg,rgba(9,10,10,.30) 0%,rgba(9,10,10,.10) 46%,rgba(9,10,10,.70) 100%);
+}
+.contact-page::before,
+.contact-page::after{
+  content:none!important;
+  display:none!important;
+}
+.contact-page>div:not(.contact-bg-overlay),
+.contact-page>.contact-details{
+  position:relative;
+  z-index:1;
+}
+.contact-page .eyebrow{
+  color:rgba(255,255,255,.72);
+}
+.contact-page .contact-details>p{
+  color:rgba(255,255,255,.72);
+}
+.contact-page .contact-link,
+.contact-page .contact-socials a{
+  text-shadow:0 2px 18px rgba(0,0,0,.42);
+}
+
+@media(max-width:900px){
+  .contact-page>.contact-bg-video{
+    object-position:56% center;
+    opacity:.54;
+  }
+  .contact-page>.contact-bg-overlay{
+    background:
+      linear-gradient(180deg,rgba(9,10,10,.72) 0%,rgba(9,10,10,.56) 44%,rgba(9,10,10,.78) 100%),
+      linear-gradient(90deg,rgba(9,10,10,.76),rgba(9,10,10,.42));
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .contact-page>.contact-bg-video{display:none}
+}
